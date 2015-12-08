@@ -11967,6 +11967,15 @@ var lunr=function(t){var e=new lunr.Index;return e.pipeline.add(lunr.stopWordFil
           displaydate: function() {
             // only for posts (e.g. Oct 12, 2012)
             return dateFormat(parseDate(raw.date), 'mmm dd, yyyy');
+          },
+          linkdatemonth: function() {
+            return dateFormat(parseDate(raw.date), 'yyyy/mm');
+          },
+          displaydatemonth: function() {
+            return dateFormat(parseDate(raw.date), 'dd. mm.');
+          },
+          dateyear: function() {
+            return dateFormat(parseDate(raw.date), 'yyyy');
           }
         });
       }
